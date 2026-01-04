@@ -1,5 +1,7 @@
 📈 Stochastic Volatility Price Forecasting (GBM + OU) – NIFTY 50
+
 Overview
+
 This project explores a stochastic volatility–based approach to price forecasting for the NIFTY 50 index.
 Instead of assuming constant volatility, the model combines Geometric Brownian Motion (GBM) for prices with an Ornstein–Uhlenbeck (OU) process to capture mean-reverting volatility behavior observed in real markets.
 The goal is not short-term prediction, but probabilistic forecasting and volatility dynamics analysis.
