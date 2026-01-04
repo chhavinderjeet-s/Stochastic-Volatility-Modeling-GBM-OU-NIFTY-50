@@ -195,8 +195,9 @@ plt.ylabel("Index Level")
 plt.legend()
 plt.grid(alpha=0.3)
 plt.tight_layout()
-plt.show()
 plt.savefig("nifty50_gbm_ou_forecast.png", dpi=300)
+plt.show()
+
 
 
 # =========================================================
@@ -207,8 +208,9 @@ plt.figure(figsize=(6, 6))
 stats.probplot(log_returns, dist="norm", plot=plt)
 plt.title("QQ Plot of Daily NIFTY50 Log-Returns")
 plt.grid(alpha=0.3)
-plt.show()
 plt.savefig("nifty50_qq_plot.png", dpi=300)
+plt.show()
+
 
 # =========================================================
 # 13. SUMMARY
