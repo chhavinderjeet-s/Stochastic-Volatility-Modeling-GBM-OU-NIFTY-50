@@ -27,7 +27,7 @@ Only closing prices are used after basic validation and cleaning.
 
 ## Approach
 
-### Log Returns
+### 1.Log Returns
 
 Prices are converted to log returns, which are more stable and additive over time:
 
@@ -35,7 +35,7 @@ rt = log(Pt/Pt-1)
 
 
 
-### Stationarity Check
+### 2.Stationarity Check
 
 The Augmented Dickey–Fuller (ADF) test is applied to:
 
@@ -47,7 +47,7 @@ This confirms that modeling is done on statistically valid series and avoids spu
 
 
 
-### GBM Calibration
+### 3.GBM Calibration
 
 The GBM parameters are estimated directly from historical log returns:
 
@@ -59,13 +59,13 @@ These define the baseline price dynamics.
 
 
 
-### Realized Volatility
+### 4.Realized Volatility
 
 To capture time-varying volatility, a 20-day rolling standard deviation of log returns is used as realized volatility, roughly corresponding to one trading month.
 
 
 
-### OU Model for Volatility
+### 5.OU Model for Volatility
 
 Realized volatility is modeled using an Ornstein–Uhlenbeck process, allowing volatility to fluctuate while slowly reverting toward a long-term mean.
 
@@ -81,7 +81,7 @@ are estimated.
 
 
 
-### Monte Carlo Simulation
+### 6.Monte Carlo Simulation
 
 • Volatility paths are simulated using the OU process
 
